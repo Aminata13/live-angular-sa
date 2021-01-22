@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="bien.image" alt="image d'un bien">
+  <div class="card-body">
+    <h5 class="card-title">{{bien.title | uppercase}}</h5>
+    <p class="card-text"> {{bien.description | summarize: 50}} </p>
+    <hr>
+    <span class="float-left btn btn-sm btn-outline-danger disabled"> {{bien.price | separator: '.'}} fcfa</span>
+    <span class="btn btn-sm btn-center disabled">Il y a {{bien.createdAt | timeleft}} j</span>
+    <a href="#" class="btn btn-sm btn-primary float-right" [routerLink]="['/biens', bien.id]">Réserver</a>
+  </div>
+</div>
